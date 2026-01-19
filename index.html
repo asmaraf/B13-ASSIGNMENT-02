@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <nav class="navbar">
+  <div class="nav-container">
+
+    <!-- Left: Brand -->
+    <div class="logo">
+      Tech<span>Wave</span>
+    </div>
+
+    <!-- Center: Menu -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Episodes</a></li>
+      <li><a href="#">Host</a></li>
+    </ul>
+
+    <!-- Right: Button + Hamburger -->
+    <div class="nav-actions">
+      <a href="#" class="btn-gradient">Subscribe →</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+     <img src="assets/hamburger-menu.png" alt="menu">
+     </button>
+
+    </div>
+
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+<section class="hero">
+        <!-- Background -->
+        <img src="assets/hero-bg.png" alt="Hero Background" class="hero-bg">
+
+        <!-- Content Container -->
+        <div class="hero-content">
+            <!-- Podcast Circle -->
+            <div class="podcast-circle">
+                <img src="assets/hero-circle.png" alt="Podcast Circle" class="circle-img">
+                <img src="assets/microphone.png" alt="Microphone" class="microphone">
+                <span class="new-badge">NEW</span>
+            </div>
+
+            <!-- Text -->
+            <h1 class="hero-title">TechWave</h1>
+            <p class="hero-description">
+                Your daily dose of tech insights, productivity hacks, and personal growth
+            </p>
+
+            <!-- Buttons -->
+            <div class="hero-buttons">
+                <a href="#" class="btn spotify-btn">
+                    <img src="assets/spotify.png" alt="Spotify Icon" class="spotify-icon"> Listen On Spotify
+                </a>
+                <a href="#" class="btn subscribe-btn">
+                    <img src="assets/message.png">Subscribe</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+  <div class="footer-container">
+
+    <h1 class="brand">Tech<span>Wave</span></h1>
+
+    <div class="platforms">
+      <a href="#"><img src="./assets/spotify.png" alt=""> Spotify</a>
+      <a href="#"><img src="./assets/apple-podcast.png" alt=""> Apple Podcasts</a>
+      <a href="#"><img src="./assets/youtube-podcast.png" alt=""> YouTube</a>
+      <a href="#"><img src="./assets/twitter.png" alt=""> Twitter</a>
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+      © 2026 TechWave Podcast. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
