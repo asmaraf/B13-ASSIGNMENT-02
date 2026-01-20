@@ -436,6 +436,7 @@ background: rgba(53, 17, 101, 0.4);
 @media (max-width: 576px) {
   .choose-grid {
     grid-template-columns: 1fr;
+    width: full;
   }
 
   .choose h2 {
@@ -496,16 +497,30 @@ background: rgba(53, 17, 101, 0.4);
 
 .play-btn {
   position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 60px;
-  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 64px;
+  height: 64px;
   background: #ff2fb3;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 22px;
-  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.play-btn::before {
+  content: "";
+  margin-left: 4px; 
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid #fff;
 }
 
 .card-body {
